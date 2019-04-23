@@ -33,7 +33,7 @@
 	li zero, -1;
 
 #define RVTEST_IO_WRITE_STR(_R, _STR) \
-	.pushsection .rodata; \
+	.pushsection .data.string; \
 20001:	.asciz _STR; \
 	.popsection; \
 	la t0, 20001b; \
